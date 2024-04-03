@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
 {% block start %}
 
+<div class="create-room-container">
+    <div class="create-room-header">Create or Enter Room</div>
+    <form class="create-room-form" id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+      <input type="text" class="room-name-input" name="room_name" id="room_name" placeholder="Room Name">
+      <input type="text" class="username-input" name="username" id="username" placeholder="Your Username">
+      <button type="submit" class="enter-room-button">Enter Room</button>
+    </form>
+  </div>
 
-<div align="center">
+
+
+
+
+
+
+
+<!-- ###################################################################### -->
+<!-- <div align="center">
     <h2>ChatterBox</h2>
 </div>
 
@@ -16,7 +33,7 @@
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" value="Enter Room">
     </form>
-</div>
+</div> -->
 
 
 {% endblock %}
