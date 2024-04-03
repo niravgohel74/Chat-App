@@ -7,8 +7,8 @@ def index(request):
     return render(request, 'index.html')
 
 def room(request, room):
-    username = request.GET.get('username')
     room_details = Room.objects.get(name=room)
+    username = request.GET.get('username')
     context = {
         'username': username,
         'room': room,
